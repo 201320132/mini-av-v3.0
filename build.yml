@@ -1,26 +1,8 @@
-name: Build Windows exe
-
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
-jobs:
-  build:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - name: Build release executable
-        run: cargo build --release --verbose
-      - name: Upload executable
-        uses: actions/upload-artifact@v4
-        with:
-          name: mini-av-windows
-          path: target/release/mini-av.exe
-          if-no-files-found: error
+- name: Build release executable
+  run: cargo build --release --verbose
+- name: Upload executable
+  uses: actions/upload-artifact@v4
+  with:
+    name: mini-av-windows
+    path: target/release/mini-av.exe
+    if-no-files-found: error
