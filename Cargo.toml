@@ -9,6 +9,10 @@ description = "Small, free antivirus front-end with its own scanner and Microsof
 tao = "0.29"
 wry = "0.46"
 
+[[bin]]
+name = "mini-av"
+path = "main.rs"
+
 [profile.release]
 opt-level = "s"
 lto = true
