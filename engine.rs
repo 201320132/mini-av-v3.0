@@ -534,7 +534,7 @@ const EICAR: &[u8] = b"X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TES
 pub const EICAR_SHA256: &str = "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f";
 
 /// The heuristics file that ships inside the program (see heuristics.txt).
-pub const DEFAULT_RULES: &str = include_str!("../heuristics.txt");
+pub const DEFAULT_RULES: &str = include_str!("heuristics.txt");
 
 /// Detection rules loaded from `heuristics.txt`. The file can be overridden or extended by the user,
 /// but it can only widen what is inspected: protection of Windows folders is hard-coded elsewhere.
