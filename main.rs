@@ -450,7 +450,7 @@ fn main() {
 
     let handler_app = app.clone();
     let built = WebViewBuilder::new()
-        .with_html(include_str!("../ui/index.html"))
+        .with_html(include_str!("index.html"))
         .with_ipc_handler(move |req: wry::http::Request<String>| handle(&handler_app, req.body()))
         .build(&window);
 
